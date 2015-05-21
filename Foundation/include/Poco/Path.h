@@ -287,6 +287,11 @@ public:
 		
 	static std::string current();
 		/// Returns the current working directory.
+
+    static bool setCurrent(const char* path);
+    static bool setCurrent(const std::string& path);
+        /// Set the current working directory, return true if succeeded,
+        /// and false otherwise.
 		
 	static std::string home();
 		/// Returns the user's home directory.

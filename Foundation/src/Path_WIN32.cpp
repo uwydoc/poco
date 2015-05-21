@@ -36,6 +36,11 @@ std::string PathImpl::currentImpl()
 	else throw SystemException("Cannot get current directory");
 }
 
+bool PathImpl::setCurrentImpl(const char* path)
+{
+    return (SetCurrentDirectoryA(path.c_str()) == TRUE);
+}
+
 
 std::string PathImpl::systemImpl()
 {

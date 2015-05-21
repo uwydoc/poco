@@ -45,6 +45,14 @@ std::string PathImpl::currentImpl()
 }
 
 
+bool PathImpl::setCurrentImpl(const std::string& path)
+{
+	std::wstring upath;
+	UnicodeConverter::toUTF16(path, upath);
+    return (SetCurrentDirectoryW(upath.c_str()) == TRUE);
+}
+
+
 std::string PathImpl::systemImpl()
 {
 	Buffer<wchar_t> buffer(MAX_PATH_LEN);

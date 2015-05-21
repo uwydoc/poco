@@ -32,6 +32,8 @@ class Foundation_API PathImpl
 public:
 	static std::string currentImpl();
 		// Returns the root directory
+    static bool setCurrentImpl(const std::string& path);
+        // Always return true
 	static std::string homeImpl();
 	static std::string tempImpl();
 	static std::string nullImpl();

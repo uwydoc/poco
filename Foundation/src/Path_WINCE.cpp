@@ -31,6 +31,11 @@ std::string PathImpl::currentImpl()
 	return("\\");
 }
 
+bool PathImpl::setCurrentImpl()
+{
+    return true;
+}
+
 
 std::string PathImpl::homeImpl()
 {

@@ -588,6 +588,17 @@ std::string Path::current()
 	return PathImpl::currentImpl();
 }
 
+
+bool Path::setCurrent(const char* path)
+{
+    return Path::setCurrent(std::string(path));
+}
+
+bool Path::setCurrent(const std::string& path)
+{
+    return PathImpl::setCurrentImpl(path);
+}
+
 	
 std::string Path::home()
 {

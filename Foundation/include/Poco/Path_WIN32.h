@@ -31,6 +31,7 @@ class Foundation_API PathImpl
 {
 public:
 	static std::string currentImpl();
+    static bool setCurrentImpl(const std::string& path);
 	static std::string homeImpl();
 	static std::string tempImpl();
 	static std::string nullImpl();

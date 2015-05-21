@@ -49,6 +49,12 @@ std::string PathImpl::currentImpl()
 }
 
 
+bool PathImpl::setCurrentImpl(const std::string& path)
+{
+    return !chdir(path.c_str());
+}
+
+
 std::string PathImpl::homeImpl()
 {
 #if defined(POCO_VXWORKS)
